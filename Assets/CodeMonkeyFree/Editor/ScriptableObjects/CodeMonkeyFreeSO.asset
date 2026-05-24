@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d777d270cee3a5c419cb21a828556f1a, type: 3}
+  m_Name: CodeMonkeyFreeSO
+  m_EditorClassIdentifier: 
+  currentVersion: 1.01
+  subtype: kitchenchaos
+  lastShownTimestamp: 1779624866
+  lastUpdateResponse:
+    version: 1.01
+    versionUrl: https://unitycodemonkey.com
+  checkedLastUpdateTimestamp: 1779624866
+  lastQOTDResponse:
+    questionId: 305
+    questionText: 'What is the result of this code:
+
+      <p>int money = 2000000000;
+      // $2 billion</p>
+
+      <p>money += 1000000000; // Adding $1 billion</p>'
+    answerA: money == 3000000000
+    answerB: money == -1294967296
+    answerC: money == 0
+    answerD: 
+    answerE: 
+  lastQotdTimestamp: 1779624866
+  lastDynamicHeaderResponse:
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleMay26MustHave.png
+    topText: The BEST Unity Bundle in ages! Includes my most recommended asset 94%
+      OFF!
+    topLink: assetstore
+    bottomText: Get 98% OFF on awesome REALISTIC HumbleBundle!
+    bottomLink: humblebundle
+  lastDynamicHeaderTimestamp: 1779624866
+  websiteLatestMessage:
+    text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
+      Click here!</a>
+  websiteLatestMessageTimestamp: 1779624866
+  websiteLatestVideos:
+    videos:
+    - youTubeId: R5LZ_dxi3Fc
+      title: Visual Studio Shortcuts (C# Tutorial for Beginners)
+    - youTubeId: LW1gycyV8VM
+      title: TOP 10 NEW Games, Made with Unity! (APRIL 2026)
+    - youTubeId: ywDrlnC-Y3M
+      title: The BEST Unity tool got EVEN BETTER! (and FREE!)
+    - youTubeId: JE8LhN-kBtY
+      title: Programming Basics (C# Tutorial for Beginners)
+  websiteLatestVideosTimestamp: 1779624866
