@@ -25,6 +25,7 @@ namespace DefaultNamespace
             if (kitchenObjectParent.HasKitchenObject())
             {
                 Debug.LogError("已经有物体了");
+                return;
             }
 
             kitchenObjectParent.SetKitchenObject(this);
