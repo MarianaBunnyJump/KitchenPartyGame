@@ -10,6 +10,11 @@ namespace DefaultNamespace
         {
             Debug.LogError("BaseCounter.Interact()");
         }
+
+        public virtual void InteractAlternate(Player player)
+        {
+            Debug.LogError("BaseCounter.InteractAlternate");
+        }
         
         public Transform GetKitchenObjectFollowTransform()
         {
