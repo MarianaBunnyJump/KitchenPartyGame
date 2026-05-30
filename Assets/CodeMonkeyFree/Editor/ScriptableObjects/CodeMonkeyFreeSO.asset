@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1779889048
+  lastShownTimestamp: 1780103084
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1779889048
+  checkedLastUpdateTimestamp: 1780103084
   lastQOTDResponse:
     questionId: 306
     questionText: 'What is the value stored in percentage?
@@ -35,7 +35,7 @@ MonoBehaviour:
     answerC: 2.5f
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1779889048
+  lastQotdTimestamp: 1780103084
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleMay26MustHave.png
     topText: The BEST Unity Bundle in ages! Includes my most recommended asset 94%
@@ -43,19 +43,19 @@ MonoBehaviour:
     topLink: assetstore
     bottomText: Get 98% OFF on awesome REALISTIC HumbleBundle!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1779889048
+  lastDynamicHeaderTimestamp: 1780103084
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1779889048
+  websiteLatestMessageTimestamp: 1780103084
   websiteLatestVideos:
     videos:
+    - youTubeId: -PPT43O48r4
+      title: The TERROR (and joy) of Pressing Publish on Steam!
     - youTubeId: 3zUfuhJBl3c
       title: First game made $1mil, second $0!
     - youTubeId: R5LZ_dxi3Fc
       title: Visual Studio Shortcuts (C# Tutorial for Beginners)
     - youTubeId: LW1gycyV8VM
       title: TOP 10 NEW Games, Made with Unity! (APRIL 2026)
-    - youTubeId: ywDrlnC-Y3M
-      title: The BEST Unity tool got EVEN BETTER! (and FREE!)
-  websiteLatestVideosTimestamp: 1779889048
+  websiteLatestVideosTimestamp: 1780103084
