@@ -14,28 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1780103084
+  lastShownTimestamp: 1780192118
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1780103084
+  checkedLastUpdateTimestamp: 1780192118
   lastQOTDResponse:
-    questionId: 306
-    questionText: 'What is the value stored in percentage?
-
-      <p>int health =
-      25;</p>
-
-      <p>int healthMax = 100;</p>
-
-      <p>float percentage = health
-      / healthMax;</p>'
-    answerA: 0.25f
-    answerB: 0
-    answerC: 2.5f
+    questionId: 307
+    questionText: What Types can you natively store with PlayerPrefs?
+    answerA: Anything
+    answerB: string, int, float, bool
+    answerC: string, int, float
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1780103084
+  lastQotdTimestamp: 1780192118
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleMay26MustHave.png
     topText: The BEST Unity Bundle in ages! Includes my most recommended asset 94%
@@ -43,19 +35,19 @@ MonoBehaviour:
     topLink: assetstore
     bottomText: Get 98% OFF on awesome REALISTIC HumbleBundle!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1780103084
+  lastDynamicHeaderTimestamp: 1780192118
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1780103084
+  websiteLatestMessageTimestamp: 1780192118
   websiteLatestVideos:
     videos:
+    - youTubeId: PrTIDnZIlDM
+      title: What are Variables? (C# Basics for Beginners)
     - youTubeId: -PPT43O48r4
       title: The TERROR (and joy) of Pressing Publish on Steam!
     - youTubeId: 3zUfuhJBl3c
       title: First game made $1mil, second $0!
     - youTubeId: R5LZ_dxi3Fc
       title: Visual Studio Shortcuts (C# Tutorial for Beginners)
-    - youTubeId: LW1gycyV8VM
-      title: TOP 10 NEW Games, Made with Unity! (APRIL 2026)
-  websiteLatestVideosTimestamp: 1780103084
+  websiteLatestVideosTimestamp: 1780192118

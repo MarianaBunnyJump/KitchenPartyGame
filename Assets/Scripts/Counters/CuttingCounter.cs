@@ -8,11 +8,11 @@ namespace DefaultNamespace
     {
         [SerializeField] private CuttingRecipeSO[] cuttingRecipeSoArray;
         private int cuttingProgress;
-        
+
         public event EventHandler OnCut;
         public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
-        
-        
+
+
         public override void Interact(Player player)
         {
             if (!HasKitchenObject())
@@ -41,6 +41,13 @@ namespace DefaultNamespace
             {
                 if (player.HasKitchenObject())
                 {
+                    if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                    {
+                        if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                        {
+                            GetKitchenObject().DestroySelf();
+                        }
+                    }
                 }
                 else
                 {
@@ -55,7 +62,7 @@ namespace DefaultNamespace
             if (HasKitchenObject() && HasRecipeInput(GetKitchenObject().GetKitchenObjectSO()))
             {
                 cuttingProgress++;
-                OnCut?.Invoke(this,EventArgs.Empty);
+                OnCut?.Invoke(this, EventArgs.Empty);
                 CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
                 OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                 {
@@ -99,6 +106,5 @@ namespace DefaultNamespace
 
             return null;
         }
-
     }
 }
