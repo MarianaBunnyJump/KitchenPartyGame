@@ -33,7 +33,7 @@ namespace DefaultNamespace
                     }
                     else
                     {
-                        if (GetKitchenObject().TryGetPlate(out  plateKitchenObject))
+                        if (GetKitchenObject().TryGetPlate(out plateKitchenObject))
                         {
                             //桌上有盘子
                             if (plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))

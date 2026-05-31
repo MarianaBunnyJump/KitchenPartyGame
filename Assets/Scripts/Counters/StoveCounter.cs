@@ -128,7 +128,7 @@ namespace DefaultNamespace
                         if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
                         {
                             GetKitchenObject().DestroySelf();
-                            
+
                             state = State.Idle;
                             OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
                             {

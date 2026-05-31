@@ -12,24 +12,24 @@ namespace DefaultNamespace
         public event EventHandler OnRecipeSuccess;
         public event EventHandler OnRecipeFailed;
         public static DeliveryManager Instance { get; private set; }
-        
+
         [SerializeField] private RecipeListSO recipeListSO;
         private List<RecipeSO> waitingRecipeSOList;
         private float spawnRecipeTimer;
         private float spawnRecipeTimerMax = 4f;
         private int waitingRecipesMax = 4;
+        private int successfulRecipesAmount;
 
         private void Awake()
         {
             Instance = this;
-            
+
             waitingRecipeSOList = new List<RecipeSO>();
             spawnRecipeTimer = spawnRecipeTimerMax;
         }
 
         private void Update()
         {
-            
             spawnRecipeTimer -= Time.deltaTime;
             if (spawnRecipeTimer <= 0f)
             {
@@ -53,7 +53,6 @@ namespace DefaultNamespace
                 RecipeSO waitingRecipeSO = waitingRecipeSOList[i];
                 if (waitingRecipeSO.kitchenObjectSoList.Count == plateKitchenObject.GetKitchenObjectSoList().Count)
                 {
-
                     bool plateContentsMatchesRecipe = true;
                     foreach (KitchenObjectSO recipeKitchenObjectSO in waitingRecipeSO.kitchenObjectSoList)
                     {
@@ -66,6 +65,7 @@ namespace DefaultNamespace
                                 break;
                             }
                         }
+
                         if (!ingredientFount)
                         {
                             plateContentsMatchesRecipe = false;
@@ -74,36 +74,29 @@ namespace DefaultNamespace
 
                     if (plateContentsMatchesRecipe)
                     {
-                        Debug.Log("player delivered the correct recipe");
+                        //Debug.Log("player delivered the correct recipe");
+                        successfulRecipesAmount++;
                         waitingRecipeSOList.RemoveAt(i);
-                        
+
                         OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
-                        OnRecipeSuccess?.Invoke(this,EventArgs.Empty);
+                        OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
                         return;
                     }
                 }
             }
-            Debug.Log("player no match recipe");
-            OnRecipeFailed?.Invoke(this,EventArgs.Empty);
+
+            // Debug.Log("player no match recipe");
+            OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         }
-        
+
         public List<RecipeSO> GetWaitingRecipeSOList()
         {
             return waitingRecipeSOList;
         }
+        
+        public int GetSuccessfulRecipesAmount()
+        {
+            return successfulRecipesAmount;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

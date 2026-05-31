@@ -24,7 +24,7 @@ namespace DefaultNamespace
                 if (plateSpawnedAmount < plateSpawnedAmountMax)
                 {
                     plateSpawnedAmount++;
-                    OnPlateSpawned?.Invoke(this,EventArgs.Empty);
+                    OnPlateSpawned?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
@@ -37,11 +37,11 @@ namespace DefaultNamespace
                 {
                     plateSpawnedAmount--;
                     KitchenObject.SpawnKitchenObject(plateKitchenObjectSO, player);
-                    OnPlateRemoved?.Invoke(this,EventArgs.Empty);
+                    OnPlateRemoved?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
-        
+
         public override void InteractAlternate(Player player)
         {
             if (player.HasKitchenObject())
