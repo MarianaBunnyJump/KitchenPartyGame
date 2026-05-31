@@ -43,7 +43,7 @@ namespace DefaultNamespace
             }
         }
 
-        public List<KitchenObjectSO> GetKitchenObjectSo()
+        public List<KitchenObjectSO> GetKitchenObjectSoList()
         {
             return kitchenObjectSOList;
         }
