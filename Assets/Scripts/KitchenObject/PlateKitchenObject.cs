@@ -9,6 +9,13 @@ namespace DefaultNamespace
         [SerializeField] private List<KitchenObjectSO> validKitchenObjectSOList;
         private List<KitchenObjectSO> kitchenObjectSOList;
 
+        public event EventHandler<OnIngredientAddedEventArgs> OnIngredientAdded;
+
+        public class OnIngredientAddedEventArgs : EventArgs
+        {
+            public KitchenObjectSO kitchenObjectSo;
+        }
+
         private void Awake()
         {
             kitchenObjectSOList = new List<KitchenObjectSO>();
@@ -20,6 +27,7 @@ namespace DefaultNamespace
             {
                 return false;
             }
+
             if (kitchenObjectSOList.Contains(kitchenObjectSO))
             {
                 return false;
@@ -27,8 +35,17 @@ namespace DefaultNamespace
             else
             {
                 kitchenObjectSOList.Add(kitchenObjectSO);
+                OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs()
+                {
+                    kitchenObjectSo = kitchenObjectSO
+                });
                 return true;
             }
+        }
+
+        public List<KitchenObjectSO> GetKitchenObjectSo()
+        {
+            return kitchenObjectSOList;
         }
     }
 }
