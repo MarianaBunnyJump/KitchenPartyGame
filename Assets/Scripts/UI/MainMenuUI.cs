@@ -14,6 +14,7 @@ namespace DefaultNamespace
         {
             startBtn.onClick.AddListener(PlayClick);
             quitBtn.onClick.AddListener(QuitClick);
+            Time.timeScale = 1f;
         }
 
         private void PlayClick()

@@ -7,7 +7,7 @@ namespace DefaultNamespace
     {
         public enum Scene
         {
-            MenuScene,
+            MainMenuScene,
             GameScene,
             LoadingScene
         }

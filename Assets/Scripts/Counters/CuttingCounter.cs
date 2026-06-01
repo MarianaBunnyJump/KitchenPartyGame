@@ -11,6 +11,11 @@ namespace DefaultNamespace
 
         public event EventHandler OnCut;
         public static event EventHandler OnAnyCut;
+
+        new public static void ResetStaticData()
+        {
+            OnAnyCut = null;
+        }
         public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
 
