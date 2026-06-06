@@ -23,7 +23,7 @@ namespace DefaultNamespace
         private State state;
         private float waitingToStartTimer = 1f;
         private float countdownToStartTimer = 3f;
-        private float gamePlayingTimer = 10f;
+        private float gamePlayingTimer = 60f;
         private float gamePlayingTimerMax = 10f;
         private bool isPause;
 

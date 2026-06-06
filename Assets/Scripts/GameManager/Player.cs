@@ -43,7 +43,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         gameInput.OnInteractAction += GameInput_OnInterAction;
         gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
     }
-    
+
 
     private void GameInput_OnInterAction(object sender, EventArgs e)
     {
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
             Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
             //如果 moveDir 是 (0,0,0)，Unity 的 Physics.CapsuleCast 会返回 false（因为零向量没有方向，无法进行有效的碰撞检测）所以 canMove = !false = true
             //这样就无法进行Z方向的纯旋转了
-            canMove = moveDir.x != 0 && !Physics.CapsuleCast(transform.position,
+            canMove = (moveDir.x < -.5f || moveDir.x > +.5f) && !Physics.CapsuleCast(transform.position,
                 transform.position + Vector3.up * playerHeight,
                 playerRadius, moveDirX, moveDistance);
             if (canMove)
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
             {
                 //如果X方向不可以移动，则尝试Z方向
                 Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
-                canMove = moveDir.z != 0 && !Physics.CapsuleCast(transform.position,
+                canMove = (moveDir.z < -.5f || moveDir.z > +.5f) && !Physics.CapsuleCast(transform.position,
                     transform.position + Vector3.up * playerHeight,
                     playerRadius, moveDirZ, moveDistance);
                 if (canMove)
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, -moveDir, Time.deltaTime * rotateSpeed);
     }
-    
+
     private void HandleInteractions()
     {
         var inputVector = gameInput.GetMovementVectorNormalized();
@@ -178,7 +178,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
         if (kitchenObject != null)
         {
-            OnPickedSomething?.Invoke(this,EventArgs.Empty);
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
         }
     }
 

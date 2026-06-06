@@ -209,5 +209,10 @@ namespace DefaultNamespace
 
             return null;
         }
+
+        public bool IsFried()
+        {
+            return state == State.Fried;
+        }
     }
 }
